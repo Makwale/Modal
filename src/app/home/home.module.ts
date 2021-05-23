@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { OneSignal } from '@ionic-native/onesignal/ngx';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+import { PhonegapLocalNotification } from '@ionic-native/phonegap-local-notification/ngx';
 
 @NgModule({
   imports: [
@@ -14,6 +16,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [ OneSignal, LocalNotifications, PhonegapLocalNotification ]
 })
 export class HomePageModule {}
